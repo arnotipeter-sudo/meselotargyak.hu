@@ -1,28 +1,107 @@
 <!doctype html>
 <html lang="hu">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mesélőtárgyak">
-  <title>Mesélőtárgyak</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: #30291f; background: #f6f2e9; }
-    header { padding: 2rem 1rem 1rem; text-align: center; }
-    h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 500; }
-    main { max-width: 1100px; margin: 0 auto; padding: 1rem; }
-    figure { margin: 0 auto; }
-    img { display: block; width: 100%; height: auto; border-radius: 4px; }
-    figcaption { padding: .8rem 0 2rem; text-align: center; color: #65594b; font-size: 1rem; }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Elvarázsol-LAK – varázslatos magyar népmesék hétköznapi tárgyakkal, tárgyanimációval.">
+<title>Elvarázsol-LAK | Tárgyanimációs mesék</title>
+<style>
+:root{--ink:#302b25;--muted:#6f6254;--paper:#fbf7ef;--cream:#f0e6d5;--rust:#9a4d36;--green:#465b49;--line:#e1d4c2}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.7}
+a{color:inherit} .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:5;background:rgba(251,247,239,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:1.45rem;font-weight:bold;text-decoration:none;color:var(--green);white-space:nowrap}
+nav{display:flex;flex-wrap:wrap;gap:6px 20px;justify-content:flex-end}
+nav a{text-decoration:none;font:500 .92rem/1.4 Arial,sans-serif;padding:8px 0}
+nav a:hover{color:var(--rust)}
+.hero{background:var(--cream);padding:64px 0 58px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.eyebrow{text-transform:uppercase;letter-spacing:.15em;color:var(--rust);font:700 .75rem Arial,sans-serif}
+h1,h2,h3{line-height:1.2;font-weight:500}
+h1{font-size:clamp(2.5rem,6vw,4.7rem);margin:.4rem 0 1.2rem;color:var(--green)}
+h2{font-size:clamp(2rem,4vw,3rem);margin:0 0 1.3rem;color:var(--green)}
+h3{font-size:1.55rem;margin:.4rem 0}
+p{margin:.7rem 0 1rem}
+.lead{font-size:1.2rem;max-width:620px}
+.hero img{width:100%;display:block;max-height:470px;object-fit:cover;border-radius:48% 48% 8px 8px;box-shadow:0 18px 45px #4b39251c}
+.button{display:inline-block;margin-top:1rem;background:var(--rust);color:white;padding:12px 20px;border-radius:3px;text-decoration:none;font:600 .95rem Arial,sans-serif}
+.button:hover{background:#793a29}
+section{padding:76px 0;scroll-margin-top:85px}
+.section-intro{max-width:760px;font-size:1.1rem}
+.bg-light{background:#f2eadf}.bg-green{background:var(--green);color:#fff}.bg-green h2,.bg-green h3{color:#fff}.bg-green .eyebrow{color:#f0c9a9}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.quote{font-size:1.3rem;font-style:italic;border-left:3px solid var(--rust);padding-left:22px;margin:2rem 0;color:var(--green)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:30px}
+.card{background:#fffaf3;border:1px solid var(--line);padding:26px;border-radius:5px}
+.card p{color:var(--muted)}
+.card img{width:100%;height:230px;object-fit:cover;border-radius:3px;margin-bottom:18px}
+.meta{font:600 .85rem Arial,sans-serif;color:var(--rust);letter-spacing:.02em}
+ul{padding-left:1.25rem}li{padding:.18rem 0}
+.programs{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.program{border-top:2px solid #c9a989;padding:22px 0}
+.contact-box{background:#fffaf3;color:var(--ink);padding:30px;border-radius:5px}
+.contact-box a{color:var(--rust)}
+footer{padding:28px 0;text-align:center;background:#28392d;color:#f7efe2;font-size:.9rem}
+@media(max-width:800px){.nav{padding:14px 0;align-items:flex-start;flex-direction:column}.nav nav{justify-content:flex-start;gap:8px 16px}.hero-grid,.two-col{grid-template-columns:1fr;gap:28px}.hero{padding:44px 0}.hero img{max-height:360px}.cards,.programs{grid-template-columns:1fr}section{padding:54px 0}}
+</style>
 </head>
 <body>
-  <header><h1>Mesélőtárgyak</h1></header>
-  <main>
-    <figure>
-      <img src="galeria19.jpg" alt="Régi bútorokkal berendezett, napfényes szoba">
-      <figcaption>Tárgyak, amelyeknek történetük van.</figcaption>
-    </figure>
-  </main>
-</body>
-</html>
+<header><div class="wrap nav">
+<a class="brand" href="#kezdo">Elvarázsol-LAK</a>
+<nav aria-label="Főmenü">
+<a href="#bemutatkozas">Bemutatkozás</a>
+<a href="#targyanimacio">Mi az a tárgyanimáció?</a>
+<a href="#mesek">Mesék</a>
+<a href="#programok">Választható programok</a>
+<a href="#kapcsolat">Kapcsolat</a>
+</nav>
+</div></header>
+<main>
+<div class="hero" id="kezdo"><div class="wrap hero-grid">
+<div><div class="eyebrow">Mesék hétköznapi tárgyakkal</div><h1>Elvarázsol-LAK</h1>
+<p class="lead">Varázslatos mesék hétköznapi tárgyakkal, avagy magyar népmesék, amelyek a szemünk előtt születnek.</p>
+<p>A régi tárgyak új életre kelnek, a konyhai eszközökből mesehősök lesznek, és egy pillanat alatt megnyílik előttünk a mesék kapuja.</p>
+<a class="button" href="#mesek">Ismerd meg a meséket</a></div>
+<div><img src="galeria19.jpg" alt="Régi tárgyak és otthonos, mesés hangulat"></div>
+</div></div>
+<section id="bemutatkozas"><div class="wrap two-col">
+<div><div class="eyebrow">A mesék mögött</div><h2>Bemutatkozás</h2>
+<p>Arnóti-Szanyi Éva vagyok, anya, feleség, óvónő, gyógypedagógus – sokféle szerep, amelyek mind hozzátettek ahhoz, aki ma vagyok.</p>
+<p>Hivatásomat 16 éven keresztül aktívan gyakoroltam. A gyermekekkel való foglalkozás, a mesék világa és a közös felfedezés mindig fontos része volt az életemnek.</p>
+<p>Lányaim születése után az életünk más irányt vett. Egy idő után éreztem, hogy szeretnék valami újat teremteni: olyan tevékenységet, amelyben újra megélhetem a pedagógusi hivatás örömét, alkothatok, és átadhatok valamit abból, amit fontosnak tartok. Így találtam rá a tárgyanimációs mesélésre.</p></div>
+<div><p class="quote">„Ha receptre lehetne írni, én mindenkinek napi egy mesét felírnék, akkor biztos még szebb lenne a világ.”</p>
+<p>A mesékben ott van az élet sokfélesége, a bátorság, a keresés és a változás lehetősége. Számomra egy új fejezet kezdődött, amelyben a mesék ismét megtalálták a helyüket az életemben.</p></div>
+</div></section>
+<section class="bg-light" id="targyanimacio"><div class="wrap">
+<div class="eyebrow">Amikor a hétköznapi rendkívülivé válik</div><h2>Mi az a tárgyanimáció?</h2>
+<p class="section-intro">Amikor a régi tárgyak új életre kelnek, és mesélni kezdenek…</p>
+<div class="two-col"><div>
+<p>A tárgyanimációs mesélés során magyar népmeséket hívok életre hétköznapi, sokszor régi, jól ismert használati tárgyak segítségével. A tárgyak kilépnek megszokott szerepükből: egy konyhai eszközből mesehős lesz, egy régi szerszám különleges képességre tesz szert, és egyszer csak egy egész mesebeli világ bontakozik ki előttünk.</p>
+<p>Különösen közel állnak hozzám a régi, családi örökségből származó tárgyak. Számomra ezek nem csupán használati tárgyak, hanem egy letűnt világ apró darabjai.</p></div>
+<div><p>És persze az újonnan felfedezett tárgyak is folyton inspirálnak. Néha elég egy különös forma, egy mozdulat vagy egy váratlan hasonlóság, és máris megszületik bennem a kérdés: vajon melyik mesében kaphatna szerepet ez a tárgy?</p>
+<p>Hiszem, hogy a magyar népmesék így is közel kerülhetnek a gyerekekhez: játékosan, meglepetésekkel, a képzelet szabadságát meghagyva. Néha egy régi tárgyban bújik meg a mese, és arra vár, hogy valaki végre megszólaltassa.</p></div></div>
+</div></section>
+<section id="mesek"><div class="wrap"><div class="eyebrow">Történetek, amelyek életre kelnek</div><h2>Mesék</h2>
+<p class="section-intro">A magyar népmesék gazdag világából merítek. A tárgyak, mondókák és énekek segítségével a történetek a gyerekek szeme előtt elevenednek meg.</p>
+<div class="cards">
+<article class="card"><div class="meta">Magyar népmese</div><h3>Szélike királykisasszony</h3><p>Dezső, az ezermester szerszámok segítségével meséli el Szélike királykisasszony történetét. A csípőfogó János úrfivá változik, a fúrógépből pedig jó barát kerekedik: a szerszámosládából minden szerszám életre kel.</p></article>
+<article class="card"><div class="meta">Magyar népmese</div><h3>A hétlábú paripa</h3><p>Bözsi, a takarító a takarítószerei segítségével mesél. Gumikesztyű, seprű, felmosó és lapát is szerepet kap, miközben együtt izgulhatunk, vajon Aranyhajú Ilona legyőzi-e a sárkánykirályt.</p></article>
+<article class="card"><div class="meta">Fésűs Éva meséje</div><h3>A kíváncsi királykisasszony</h3><p>Konyhai eszközök segítségével megelevenedik a nagymama konyhájának világa, és a mese végére az is kiderül, miért olyan kíváncsi a királykisasszony.</p></article>
+<article class="card"><div class="meta">Burmai mese</div><h3>Az egérkisasszony vőlegénye</h3><p>Rozi tereget: anyagok, textilek és ruhadarabok – selyem, muszlin, zokni és nadrág – segítenek életre kelteni ezt a különleges történetet.</p></article>
+</div>
+</div></section>
+<section class="bg-green" id="programok"><div class="wrap"><div class="eyebrow">Óvodáknak, iskoláknak, könyvtáraknak</div><h2>Választható programok</h2>
+<p class="section-intro">A programokat a gyermekek életkorához és az adott közösséghez igazítom.</p>
+<div class="programs"><article class="program"><h3>Tárgyanimációs magyar népmesék</h3><p>Ismert és kevésbé ismert magyar népmeséket hozok közelebb a gyerekekhez régi használati tárgyak segítségével.</p><ul><li><strong>Ajánlott korosztály:</strong> óvodások és kisiskolások</li><li><strong>Időtartam:</strong> egy mese 20–30 perc; lehetőség van két, tartalmában összekapcsolódó mesére is</li><li><strong>Helyszín:</strong> óvoda, iskola, rendezvényterem, könyvtár</li></ul></article>
+<article class="program"><h3>Mesés foglalkozások</h3><p>A mese után együtt kalandozunk tovább. Beszélgetünk a történetről, játszunk, alkotunk, és a gyerekek maguk is részeseivé válnak a mese világának.</p><ul><li>Mesehallgatás</li><li>Közös játék és beszélgetés</li><li>Kreatív, alkotó tevékenység</li><li>A történet továbbgondolása</li></ul></article></div>
+<div class="two-col" style="margin-top:32px"><div><h3>Kinek ajánlom?</h3><p>Óvodáknak, általános iskoláknak, könyvtáraknak, művelődési házaknak és családi rendezvények szervezőinek.</p></div><div><h3>Miért érdemes meghívni?</h3><p>Pedagógiai és gyógypedagógiai tapasztalattal rendelkezem, a magyar népmesék hagyományára építek, és sajátos tárgyanimációs technikával teremtek különleges vizuális élményt.</p></div></div>
+<a class="button" href="#kapcsolat" style="background:#f0d0b8;color:#302b25">Érdeklődöm a programokról</a>
+</div></section>
+<section id="kapcsolat"><div class="wrap two-col"><div><div class="eyebrow">Mesés napokat kívánok!</div><h2>Kapcsolat</h2><p>Bízom benne, hogy lesz lehetőségem személyesen is egy-egy mesével elvarázsolni Önöket. Várom megkeresésüket!</p><p>Szeretettel,<br><strong>Arnóti-Szanyi Évi</strong></p></div>
+<div class="contact-box"><h3>Keressen bizalommal</h3><p><strong>Telefon:</strong><br><a href="tel:+36306549242">+36 30 654 9242</a></p><p><strong>E-mail:</strong><br><a href="mailto:arnotiszanyieva@gmail.com">arnotiszanyieva@gmail.com</a></p><p><strong>Facebook:</strong><br><a href="https://www.facebook.com/" target="_blank" rel="noopener">Elvarázsol-LAK</a></p></div>
+</div></section>
+</main>
+<footer><div class="wrap">Elvarázsol-LAK · Varázslatos mesék hétköznapi tárgyakkal</div></footer>
+</body></html>
