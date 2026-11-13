@@ -45,6 +45,32 @@ ul{padding-left:1.25rem}li{padding:.18rem 0}
 .contact-box a{color:var(--rust)}
 footer{padding:28px 0;text-align:center;background:#28392d;color:#f7efe2;font-size:.9rem}
 @media(max-width:800px){.nav{padding:14px 0;align-items:flex-start;flex-direction:column}.nav nav{justify-content:flex-start;gap:8px 16px}.hero-grid,.two-col{grid-template-columns:1fr;gap:28px}.hero{padding:44px 0}.hero img{max-height:360px}.cards,.programs{grid-template-columns:1fr}.story-gallery{grid-template-columns:1fr 1fr}.story-gallery img{height:210px;object-fit:contain;object-position:center}section{padding:54px 0}}
+
+/* Finom, magyar népművészet ihlette díszítések */
+:root{--folk-red:#a9433c;--folk-red-soft:#c8796e;--folk-green:#64785a;--folk-green-soft:#9aa786;--folk-gold:#c7a875}
+body{background-image:radial-gradient(circle at 12px 12px,#a9433c08 1.4px,transparent 1.8px);background-size:30px 30px}
+header{border-bottom:2px solid #a9433c55}
+.brand:before{content:"❦";font-size:.88em;color:var(--folk-red);margin-right:8px}
+.brand:after{content:" ❦";font-size:.88em;color:var(--folk-green);margin-left:7px}
+.hero{background-color:var(--cream);background-image:radial-gradient(ellipse at 8% 10%,#b86b4520 0 2px,transparent 3px),radial-gradient(ellipse at 92% 90%,#465b4920 0 2px,transparent 3px);border-bottom:1px solid #c7a87580;position:relative}
+.hero:after{content:"❧  ❀  ❧  ❀  ❧  ❀  ❧";display:block;text-align:center;color:var(--folk-red);opacity:.58;letter-spacing:.42em;font-size:1.15rem;position:absolute;bottom:8px;left:0;right:0;pointer-events:none}
+h2{position:relative;padding-bottom:14px}
+h2:after{content:"❧  ❀  ❧";display:block;color:var(--folk-red);font-size:.82rem;letter-spacing:.32em;margin-top:9px;opacity:.8}
+section{position:relative}
+section:not(.hero):after{content:"❦  ❀  ❦";display:block;text-align:center;color:var(--folk-green);opacity:.48;letter-spacing:.5em;font-size:1rem;margin-top:36px;pointer-events:none}
+.bg-light{background-color:#f2eadf;background-image:radial-gradient(circle at 18px 18px,#a9433c0a 1px,transparent 1.5px);background-size:38px 38px}
+.bg-green{background-color:#465b49;background-image:radial-gradient(circle at 18px 18px,#fff5df0b 1px,transparent 1.5px);background-size:38px 38px}
+.card,.testimonial,.contact-box{border-top:3px solid var(--folk-red-soft);position:relative;box-shadow:0 5px 18px #4b39250a}
+.card:after,.testimonial:after{content:"❀";position:absolute;right:14px;top:8px;color:var(--folk-red);font-size:1.05rem;opacity:.65}
+.program{border-top:2px solid var(--folk-gold);position:relative}
+.program:before{content:"❧";color:var(--folk-red-soft);position:absolute;right:4px;top:12px;font-size:1.15rem;opacity:.8}
+.quote{border-left-color:var(--folk-red)}
+.button{background:var(--folk-red)}
+.button:hover{background:#873b35}
+nav a:hover{color:var(--folk-red);border-bottom:1px solid var(--folk-red)}
+footer{border-top:4px solid #a9433c;background-color:#344638;background-image:radial-gradient(circle at 15px 15px,#fff5df12 1px,transparent 1.5px);background-size:34px 34px}
+.photo-credit{font:italic .82rem Arial,sans-serif;color:var(--muted);text-align:right;margin:-10px 0 16px}
+@media(max-width:800px){.hero:after{font-size:.85rem;letter-spacing:.18em;bottom:5px}section:not(.hero):after{margin-top:24px}}
 </style>
 </head>
 <body>
