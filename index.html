@@ -122,6 +122,52 @@ section:not(.hero):before{font-size:2rem;letter-spacing:.1em;margin-bottom:22px}
 .card:after,.testimonial:after{font-size:1.8rem}
 .program:before{font-size:1.5rem;letter-spacing:.1em}
 }
+
+/* Frissített, levegősebb színvilág és szövegtördelés */
+:root{--ink:#2f3028;--muted:#67685a;--paper:#fbf8f0;--cream:#f1e8d3;--rust:#a64f3e;--green:#405b49;--line:#ded4bf;--folk-red:#a64f3e;--folk-green:#58745b;--folk-gold:#c7a56a}
+body{font-family:Georgia,"Times New Roman",serif;line-height:1.8;background-color:#fbf8f0;background-image:none}
+header{background:rgba(251,248,240,.97);border-bottom:1px solid #d8c8a7}
+.nav{gap:24px}
+nav{gap:8px 18px}
+nav a{line-height:1.6}
+.hero{background:#f1e8d3;border-bottom:1px solid #d9c9a8}
+.hero-grid{gap:52px}
+.hero-grid>div:first-child{padding:12px 10px 28px}
+.hero img{border-radius:22px;object-fit:cover;object-position:center}
+h1{letter-spacing:-.025em;line-height:1.08}
+h2{line-height:1.18;margin-bottom:1.5rem}
+h2:before,h2:after{font-size:1.25rem;letter-spacing:.22em;margin:8px 0}
+section{padding:68px 0}
+section:not(.hero):before{font-size:1.15rem;letter-spacing:.32em;margin-bottom:22px}
+section:not(.hero):after{display:none}
+.bg-light{background-color:#f4eee2;background-image:none}
+.bg-green{background-color:#405b49;background-image:none}
+.card,.testimonial,.contact-box{background:#fffdf7;border:1px solid #e2d7c4;border-top:3px solid #b86b52;border-radius:10px;box-shadow:0 8px 26px #4638220b}
+.card{padding:clamp(20px,3vw,32px)}
+.card:before,.testimonial:before{font-size:1.05rem;letter-spacing:.2em;margin-bottom:14px}
+.card:after,.testimonial:after{font-size:1.35rem}
+.card h3{margin-top:.8rem;line-height:1.3}
+.card p,.section-intro{max-width:75ch}
+.card p{color:#55574d}
+.story-gallery{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0 0 22px}
+.story-gallery img{height:220px;width:100%;object-fit:contain;object-position:center;background:#f4eee2;border-radius:7px;padding:5px}
+.apple-gallery img{height:250px}
+.portrait{width:100%;max-height:460px;object-fit:cover;object-position:center;border-radius:12px;border:5px solid #fffdf7;box-shadow:0 8px 26px #46382214;margin:0 0 24px}
+.quote{font-size:1.22rem;line-height:1.7;border-left:3px solid #a64f3e;background:#f4eee2;padding:20px 24px;border-radius:0 8px 8px 0}
+.button{border-radius:6px;padding:13px 22px}
+.program{padding:24px 0}
+footer{background:#344638;border-top:4px solid #b86b52}
+@media(max-width:800px){
+ .nav{gap:12px}
+ .hero-grid{gap:25px}
+ section{padding:48px 0}
+ .story-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .story-gallery img,.apple-gallery img{height:200px}
+ .portrait{max-height:380px}
+ .card{padding:20px}
+ h2:before,h2:after{font-size:1rem}
+}
+
 </style>
 </head>
 <body>
@@ -151,7 +197,7 @@ section:not(.hero):before{font-size:2rem;letter-spacing:.1em;margin-bottom:22px}
 <p>Az óvodapedagógusi diploma megszerzése után, a gyógypedagógiai tanulmányokat folytattam. A pszichopedagógiai képzés során volt lehetőségem a mesék világába is elmerülnöm, ahol nagyon jó alapokat kaptam.</p>
 <p>A gyermekekkel való foglalkozás, a mesék világa és a közös felfedezés mindig fontos része volt az életemnek.</p>
 <p>Lányaim születése után az életünk más irányt vett. Egy idő után éreztem, hogy szeretnék valami újat teremteni: olyan tevékenységet, amelyben újra megélhetem a pedagógusi hivatás örömét, alkothatok, és átadhatok valamit abból, amit fontosnak tartok. Így találtam rá a tárgyanimációs mesélésre.</p><p>„A mese egy csoda, minden benne van, ami az életben előfordul és minden korosztály számára gyógyító erővel szolgál. A mese által lehetsz bátor katona, félénk nyuszi, csodálatos királykisasszony, vagy tűzokádó sárkány. A mese olyan történet, amelyben mindenért meg kell dolgozni, semmi sem magától szép és jó, semmi sem magától működik rendben. A hős épp azért jár be egy utat, hogy szebbé, jóvá, működővé tegye maga körül mindazt, ami rút, rossz vagy működésképtelen.” (Boldizsár Ildikó)</p></div>
-<div><p class="quote">„Ha receptre lehetne írni, én mindenkinek napi egy mesét felírnék, akkor biztos még szebb lenne a világ.”</p>
+<div><img class="portrait" src="én.jpg" alt="Arnóti-Szanyi Éva" loading="lazy"><p class="quote">„Ha receptre lehetne írni, én mindenkinek napi egy mesét felírnék, akkor biztos még szebb lenne a világ.”</p>
 <p>A mesékben ott van az élet sokfélesége, a bátorság, a keresés és a változás lehetősége. Számomra egy új fejezet kezdődött, amelyben a mesék ismét megtalálták a helyüket az életemben.</p></div>
 </div></section>
 <section class="bg-light" id="targyanimacio"><div class="wrap">
@@ -174,6 +220,7 @@ section:not(.hero):before{font-size:2rem;letter-spacing:.1em;margin-bottom:22px}
 <article class="card"><div class="story-gallery"><img src="B%C5%91zsi%20a%20takar%C3%ADt%C3%B3%201.JPG" alt="Bözsi a takarító – első kép" loading="lazy"><img src="B%C3%B6zsi%20a%20takar%C3%ADt%C3%B3%202.JPG" alt="Bözsi a takarító – második kép" loading="lazy"><img src="B%C3%B6zsi%20a%20takar%C3%ADt%C3%B3%203.JPG" alt="Bözsi a takarító – harmadik kép" loading="lazy"><img src="B%C3%B6zsi%20a%20takar%C3%ADt%C3%B3%204.JPG" alt="Bözsi a takarító – negyedik kép" loading="lazy"></div><div class="meta">Magyar népmese</div><h3>A hétlábú paripa</h3><p>Bözsi, a takarító a takarítószerei segítségével mesél. Gumikesztyű, seprű, felmosó és lapát is szerepet kap, miközben együtt izgulhatunk, vajon Aranyhajú Ilona legyőzi-e a sárkánykirályt.</p></article>
 <article class="card"><div class="story-gallery"><img src="K%C3%ADv%C3%A1ncsi%202.jpg" alt="A kíváncsi királykisasszony – a főszereplő arca is jól látható" loading="lazy"><img src="K%C3%ADv%C3%A1ncsi%203.jpg" alt="A kíváncsi királykisasszony – a főszereplő arca is jól látható" loading="lazy"><img src="K%C3%ADv%C3%A1ncsi%204.jpg" alt="A kíváncsi királykisasszony – a főszereplő arca is jól látható" loading="lazy"></div><p class="photo-credit">Fotó: Tóth Gábor – Dunaharaszti Online</p><div class="meta">Fésűs Éva meséje</div><h3>A kíváncsi királykisasszony</h3><p>Konyhai eszközök segítségével megelevenedik a nagymama konyhájának világa, és a mese végére az is kiderül, miért olyan kíváncsi a királykisasszony.</p></article>
 <article class="card"><img src="Rozi%201.jpg" alt="Az egérkisasszony vőlegénye – a főszereplő arca is jól látható" loading="lazy" style="object-fit:contain;object-position:center;background:#f2eadf"><div class="meta">Burmai mese</div><h3>Az egérkisasszony vőlegénye</h3><p>Rozi tereget: anyagok, textilek és ruhadarabok – selyem, muszlin, zokni és nadrág – segítenek életre kelteni ezt a különleges történetet.</p></article>
+<article class="card apple-story"><div class="story-gallery apple-gallery"><img src="Alma1.jpg" alt="Hogyan került csillag az almákba? – 1. kép" loading="lazy"><img src="Alma2.jpg" alt="Hogyan került csillag az almákba? – 2. kép" loading="lazy"><img src="Alma3.jpg" alt="Hogyan került csillag az almákba? – 3. kép" loading="lazy"><img src="Alma4.jpg" alt="Hogyan került csillag az almákba? – 4. kép" loading="lazy"></div><div class="meta">Népmese nyomán · Mesés foglalkozás</div><h3>Hogyan került csillag az almákba?</h3><p>Mesés, élményalapú foglalkozás gyermekközösségeknek. (Óvodákba, iskolákba, könyvtárakba és születésnapok alkalmával ajánlom.)</p><p class="meta">Időtartam: kb.3 óra</p><h3>Mi rejtőzik az alma belsejében?</h3><p>A <em>Hogyan került csillag az almákba?</em> című népmese nyomán egy játékos, alkotó, foglalkozáson vehetnek részt a gyerekek. Ahol a mesélés mellett ,almás énekek, nemezelés, közös almakompót-készítés és ízfelismerő játék várja őket.</p><p>A foglalkozás során a gyerekek nem csupán hallgatói, hanem aktív résztvevői is a mesés kalandnak. A történet, a természetes anyagok, az ízek és a közös alkotás segítségével egy sokszínű, örömteli élménnyé válik a mese.</p></article>
 </div>
 </div></section>
 <section class="bg-green" id="programok"><div class="wrap"><div class="eyebrow">Óvodáknak, iskoláknak, könyvtáraknak</div><h2>Választható programok</h2>
