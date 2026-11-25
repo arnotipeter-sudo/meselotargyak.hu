@@ -168,6 +168,27 @@ footer{background:#344638;border-top:4px solid #b86b52}
  h2:before,h2:after{font-size:1rem}
 }
 
+
+/* Finomabb díszítés, jól olvasható tartalom */
+body{background-image:none}
+.brand:before,.brand:after{content:none!important}
+.hero-grid>div:first-child:before,.hero-grid>div:first-child:after,
+h2:before,h2:after,section:not(.hero):before,
+.card:before,.testimonial:before,.card:after,.testimonial:after,
+.program:before{content:none!important;display:none!important}
+h2{padding:0 0 14px;border-bottom:2px solid #d8c8a7}
+section:not(.hero){background-image:none}
+.bg-light{background-image:none}
+.portrait{display:block;width:min(100%,300px);max-height:360px;object-fit:contain;object-position:center top;margin:0 auto 24px}
+.story-gallery{display:block;position:relative;min-height:220px}
+.story-gallery img{display:none;width:100%;height:260px;object-fit:contain;object-position:center;background:#f4eee2;border-radius:7px;padding:5px}
+.story-gallery img:first-child{display:block}
+.apple-story{background:#f8f0df;border:2px solid #c7a56a;border-radius:12px;padding:clamp(20px,3vw,32px)}
+.apple-story .story-gallery img{height:290px;background:#fffdf7}
+.apple-story h3{color:var(--rust)}
+.program .meta{margin-bottom:8px}
+@media(max-width:800px){.portrait{width:min(100%,260px);max-height:320px}.story-gallery{min-height:190px}.story-gallery img{height:220px}.apple-story .story-gallery img{height:240px}}
+
 </style>
 </head>
 <body>
@@ -220,15 +241,15 @@ footer{background:#344638;border-top:4px solid #b86b52}
 <article class="card"><div class="story-gallery"><img src="B%C5%91zsi%20a%20takar%C3%ADt%C3%B3%201.JPG" alt="Bözsi a takarító – első kép" loading="lazy"><img src="B%C3%B6zsi%20a%20takar%C3%ADt%C3%B3%202.JPG" alt="Bözsi a takarító – második kép" loading="lazy"><img src="B%C3%B6zsi%20a%20takar%C3%ADt%C3%B3%203.JPG" alt="Bözsi a takarító – harmadik kép" loading="lazy"><img src="B%C3%B6zsi%20a%20takar%C3%ADt%C3%B3%204.JPG" alt="Bözsi a takarító – negyedik kép" loading="lazy"></div><div class="meta">Magyar népmese</div><h3>A hétlábú paripa</h3><p>Bözsi, a takarító a takarítószerei segítségével mesél. Gumikesztyű, seprű, felmosó és lapát is szerepet kap, miközben együtt izgulhatunk, vajon Aranyhajú Ilona legyőzi-e a sárkánykirályt.</p></article>
 <article class="card"><div class="story-gallery"><img src="K%C3%ADv%C3%A1ncsi%202.jpg" alt="A kíváncsi királykisasszony – a főszereplő arca is jól látható" loading="lazy"><img src="K%C3%ADv%C3%A1ncsi%203.jpg" alt="A kíváncsi királykisasszony – a főszereplő arca is jól látható" loading="lazy"><img src="K%C3%ADv%C3%A1ncsi%204.jpg" alt="A kíváncsi királykisasszony – a főszereplő arca is jól látható" loading="lazy"></div><p class="photo-credit">Fotó: Tóth Gábor – Dunaharaszti Online</p><div class="meta">Fésűs Éva meséje</div><h3>A kíváncsi királykisasszony</h3><p>Konyhai eszközök segítségével megelevenedik a nagymama konyhájának világa, és a mese végére az is kiderül, miért olyan kíváncsi a királykisasszony.</p></article>
 <article class="card"><img src="Rozi%201.jpg" alt="Az egérkisasszony vőlegénye – a főszereplő arca is jól látható" loading="lazy" style="object-fit:contain;object-position:center;background:#f2eadf"><div class="meta">Burmai mese</div><h3>Az egérkisasszony vőlegénye</h3><p>Rozi tereget: anyagok, textilek és ruhadarabok – selyem, muszlin, zokni és nadrág – segítenek életre kelteni ezt a különleges történetet.</p></article>
-<article class="card apple-story"><div class="story-gallery apple-gallery"><img src="Alma1jpg.jpg" alt="Hogyan került csillag az almákba? – 1. kép" loading="lazy"><img src="Alma2jpg.jpg" alt="Hogyan került csillag az almákba? – 2. kép" loading="lazy"><img src="Alma3jpg.jpg" alt="Hogyan került csillag az almákba? – 3. kép" loading="lazy"><img src="Alma4jpg.jpg" alt="Hogyan került csillag az almákba? – 4. kép" loading="lazy"></div><div class="meta">Népmese nyomán · Mesés foglalkozás</div><h3>Hogyan került csillag az almákba?</h3><p>Mesés, élményalapú foglalkozás gyermekközösségeknek. (Óvodákba, iskolákba, könyvtárakba és születésnapok alkalmával ajánlom.)</p><p class="meta">Időtartam: kb.3 óra</p><h3>Mi rejtőzik az alma belsejében?</h3><p>A <em>Hogyan került csillag az almákba?</em> című népmese nyomán egy játékos, alkotó, foglalkozáson vehetnek részt a gyerekek. Ahol a mesélés mellett ,almás énekek, nemezelés, közös almakompót-készítés és ízfelismerő játék várja őket.</p><p>A foglalkozás során a gyerekek nem csupán hallgatói, hanem aktív résztvevői is a mesés kalandnak. A történet, a természetes anyagok, az ízek és a közös alkotás segítségével egy sokszínű, örömteli élménnyé válik a mese.</p></article>
+<article class="card apple-story"><div class="eyebrow">Külön mesés foglalkozás</div><div class="story-gallery apple-gallery"><img src="Alma1jpg.jpg" alt="Hogyan került csillag az almákba? – 1. kép" loading="lazy"><img src="Alma2jpg.jpg" alt="Hogyan került csillag az almákba? – 2. kép" loading="lazy"><img src="Alma3jpg.jpg" alt="Hogyan került csillag az almákba? – 3. kép" loading="lazy"><img src="Alma4jpg.jpg" alt="Hogyan került csillag az almákba? – 4. kép" loading="lazy"></div><div class="meta">Népmese nyomán · Mesés foglalkozás</div><h3>Hogyan került csillag az almákba?</h3><p>Mesés, élményalapú foglalkozás gyermekközösségeknek. (Óvodákba, iskolákba, könyvtárakba és születésnapok alkalmával ajánlom.)</p><p class="meta">Időtartam: 3 óra</p><p class="meta">Gyereklétszám: maximum 20 fő</p><h3>Mi rejtőzik az alma belsejében?</h3><p>A <em>Hogyan került csillag az almákba?</em> című népmese nyomán egy játékos, alkotó, foglalkozáson vehetnek részt a gyerekek. Ahol a mesélés mellett ,almás énekek, nemezelés, közös almakompót-készítés és ízfelismerő játék várja őket.</p><p>A foglalkozás során a gyerekek nem csupán hallgatói, hanem aktív résztvevői is a mesés kalandnak. A történet, a természetes anyagok, az ízek és a közös alkotás segítségével egy sokszínű, örömteli élménnyé válik a mese.</p></article>
 </div>
 </div></section>
 <section class="bg-green" id="programok"><div class="wrap"><div class="eyebrow">Óvodáknak, iskoláknak, könyvtáraknak</div><h2>Választható programok</h2>
 <p class="section-intro">A programokat a gyermekek életkorához és az adott közösséghez igazítom.</p>
 <div class="programs"><article class="program"><h3>Tárgyanimációs magyar népmesék</h3><p>Ismert és kevésbé ismert magyar népmeséket hozok közelebb a gyerekekhez régi használati tárgyak segítségével.</p><ul><li><strong>Ajánlott korosztály:</strong> óvodások és kisiskolások</li><li><strong>Időtartam:</strong> 35-40perc</li><li><strong>Helyszín:</strong> óvoda, iskola, rendezvényterem, könyvtár</li></ul></article>
-<article class="program"><h3>Mesés foglalkozások</h3><p>A mese után együtt kalandozunk tovább. Beszélgetünk a történetről, játszunk, alkotunk, és a gyerekek maguk is részeseivé válnak a mese világának.</p><ul><li>Mesehallgatás</li><li>Közös játék és beszélgetés</li><li>Kreatív, alkotó tevékenység</li><li>A történet továbbgondolása</li></ul></article></div>
+<article class="program"><h3>Mesés foglalkozások</h3><p>A mese után együtt kalandozunk tovább. Beszélgetünk a történetről, játszunk, alkotunk, és a gyerekek maguk is részeseivé válnak a mese világának.</p><ul><li>Mesehallgatás</li><li>Közös játék és beszélgetés</li><li>Kreatív, alkotó tevékenység</li><li>A történet továbbgondolása</li></ul><p><strong>Időtartam:</strong> 3 óra</p><p><strong>Gyereklétszám:</strong> maximum 20 fő</p></article></div>
 <div class="two-col" style="margin-top:32px"><div><h3>Kinek ajánlom?</h3><p>Óvodáknak, általános iskoláknak, könyvtáraknak, művelődési házaknak, családi rendezvények szervezőinek és cégeknek.</p></div><div><h3>Miért érdemes meghívni?</h3><p>Pedagógiai és gyógypedagógiai tapasztalattal rendelkezem, a magyar népmesék hagyományára építek, és sajátos tárgyanimációs technikával teremtek különleges vizuális élményt.</p></div></div>
-<a class="button" href="#kapcsolat" style="background:#f0d0b8;color:#302b25">Érdeklődöm a programokról</a>
+<a class="button" href="#kapcsolat" style="background:#f0d0b8;color:#302b25">Kérjen egyéni ajánlatot</a>
 </div></section>
 <section class="bg-light" id="masok-mondtak"><div class="wrap"><div class="eyebrow">Visszajelzések</div><h2>Mások mondták</h2>
 <div class="testimonial"><p>Éva tárgyanimációs meseelőadásait mindig nagy kíváncsisággal várom. Hihetetlen kreativitás jellemzi mind a mese szereplőit megelevenítő tárgyak kiválasztásában, mind a történetmesélés során. Az előadásoknak köszönhetően a nézők fantáziáját megmozgatva akár egy gumikesztyű, egy felmosórongy, vagy varrógépcérnák sokasága képes megeleveníteni a mesék szereplőit. Az előadások nem nélkülözik a humort sem, amely vidám perceket nyújt kicsiknek és nagyoknak egyaránt. Szeretettel ajánlom az előadásokat mindenkinek.</p><p class="attribution">Dézsi Gabriella · igazgatásszervező</p></div>
@@ -236,8 +257,23 @@ footer{background:#344638;border-top:4px solid #b86b52}
 <div class="testimonial"><p>„Régóta dolgozom óvodapedagógusként és mindig kutatom a mesék titkát. Keresem hogyan lehet a gyerekeknek színesen, a figyelmüket felkeltve mesélni. Aztán megismertem Évit, aki valami egészen más csodát álmodott és álmodtat az őt néző és hallgató közönséggel. Nála a fantázia beköltözik a háztartásba, és onnan bújik elő. A meséiben semmi sem az, aminek elsőre látszik. Egy egyszerű felmosómoppból királylányi hajkorona lesz, a sárga gumikesztyűből pedig ötlábú ló, amely hátán bármikor elvágtathatunk a kalandok felé. Vagy máskor nekilát teregetni és mire kitereget egy érzelmes történettel lesz gazdagabb a hallgatóság. Azt hiszem mindenkinek szüksége van erre a varázslatra, erre a páratlan látásmódra. Javaslom, hogy nézzétek meg a meséit és fedezzétek fel újra a képzelet határtalan erejét! Nem csak gyerekeknek ajánlom!”</p><p class="attribution">Kakas Zsuzsa · óvodapedagógus</p></div>
 </div></section>
 <section id="kapcsolat"><div class="wrap two-col"><div><div class="eyebrow">Mesés napokat kívánok!</div><h2>Kapcsolat</h2><p>Bízom benne, hogy lesz lehetőségem személyesen is egy-egy mesével elvarázsolni Önöket. Várom megkeresésüket!</p><p>Szeretettel,<br><strong>Arnóti-Szanyi Évi</strong></p></div>
-<div class="contact-box"><h3>Keressen bizalommal</h3><p><strong>Telefon:</strong><br><a href="tel:+36306549242">+36 30 654 9242</a></p><p><strong>E-mail:</strong><br><a href="mailto:arnotiszanyieva@gmail.com">arnotiszanyieva@gmail.com</a></p><p><strong>Facebook:</strong><br><a href="https://www.facebook.com/" target="_blank" rel="noopener">Mesélő Tárgyak</a></p></div>
+<div class="contact-box"><h3>Keressen bizalommal</h3><p><strong>Telefon:</strong><br><a href="tel:+36306549242">+36 30 654 9242</a></p><p><strong>E-mail:</strong><br><a href="mailto:arnotiszanyieva@gmail.com">arnotiszanyieva@gmail.com</a></p><p><strong>Facebook:</strong><br><a href="https://www.facebook.com/" target="_blank" rel="noopener">Elvarázsol- LAK</a></p></div>
 </div></section>
 </main>
 <footer><div class="wrap">Mesélő Tárgyak · Varázslatos mesék hétköznapi tárgyakkal</div></footer>
+
+<script>
+document.querySelectorAll('.story-gallery').forEach(function(gallery){
+  const images=Array.from(gallery.querySelectorAll('img'));
+  if(images.length<2) return;
+  let index=0;
+  images.forEach((img,i)=>{img.style.display=i===0?'block':'none';});
+  window.setInterval(function(){
+    images[index].style.display='none';
+    index=(index+1)%images.length;
+    images[index].style.display='block';
+  },3500);
+});
+</script>
+
 </body></html>
